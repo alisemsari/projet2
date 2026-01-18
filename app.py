@@ -16,6 +16,19 @@ import os
 # layout="wide" : Force l'affichage à utiliser toute la largeur de l'écran.
 st.set_page_config(page_title="Cinéma Recommandation", layout="wide")
 
+# --- MODIFICATION POUR ENLEVER L'ICÔNE GITHUB ---
+st.markdown(
+    """
+    <style>
+    .stAppDeployButton {display:none;}
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+# --- FIN DE MODIFICATION ---
+
 # . GESTION DE L'AUTHENTIFICATION (LOGIN) ---
 # On vérifie si le fichier "exo.csv" existe physiquement sur l'ordinateur
 if os.path.exists("exo.csv"):
