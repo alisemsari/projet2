@@ -2,3 +2,6 @@ streamlit
 pandas
 scikit-learn
 streamlit-authenticator
+streamlit-option-menu
+matplotlib
+seaborn
