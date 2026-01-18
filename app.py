@@ -16,32 +16,6 @@ import os
 # layout="wide" : Force l'affichage à utiliser toute la largeur de l'écran.
 st.set_page_config(page_title="Cinéma Recommandation", layout="wide")
 
-# --- MODIFICATION POUR ENLEVER UNIQUEMENT L'ONGLET GITHUB ---
-st.markdown(
-    """
-    <style>
-    /* 1. Cache le bouton Deploy et l'icône GitHub en haut à droite */
-    .stAppDeployButton {
-        display: none !important;
-    }
-    /* 2. Cache les boutons de partage et les outils de dev dans le header */
-    [data-testid="stHeader"] > div:first-child {
-        visibility: hidden !important;
-    }
-    /* 3. Cache le bouton "Manage app" en bas à droite (visible sur vos photos) */
-    [data-testid="stStatusWidget"] {
-        visibility: hidden !important;
-    }
-    /* 4. Cache le footer "Made with Streamlit" */
-    footer {
-        visibility: hidden !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-# --- FIN DE MODIFICATION ---
-
 # . GESTION DE L'AUTHENTIFICATION (LOGIN) ---
 # On vérifie si le fichier "exo.csv" existe physiquement sur l'ordinateur
 if os.path.exists("exo.csv"):
