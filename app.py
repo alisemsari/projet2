@@ -20,20 +20,21 @@ st.set_page_config(page_title="Cinéma Recommandation", layout="wide")
 st.markdown(
     """
     <style>
-    /* Masquer uniquement le bouton GitHub et les options de déploiement */
+    /* 1. Cache le bouton Deploy et l'icône GitHub en haut à droite */
     .stAppDeployButton {
         display: none !important;
     }
-    /* Masquer le menu "Manage App" et le footer sans supprimer le header complet */
+    /* 2. Cache les boutons de partage et les outils de dev dans le header */
+    [data-testid="stHeader"] > div:first-child {
+        visibility: hidden !important;
+    }
+    /* 3. Cache le bouton "Manage app" en bas à droite (visible sur vos photos) */
+    [data-testid="stStatusWidget"] {
+        visibility: hidden !important;
+    }
+    /* 4. Cache le footer "Made with Streamlit" */
     footer {
-        visibility: hidden;
-    }
-    #MainMenu {
-        visibility: hidden;
-    }
-    /* Cache spécifiquement les icônes de développement en haut à droite */
-    header[data-testid="stHeader"] > div:first-child {
-        display: none;
+        visibility: hidden !important;
     }
     </style>
     """,
