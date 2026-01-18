@@ -1,0 +1,4 @@
+username,name,password,email,failed_login_attemps,logged_in,role
+ali,ali,ali,ali@outlook.com,0,False,user
+martine,Martine,martine,martine@outlook.com,0,False,user
+pauline,Pauline,pauline,pauline@outlook.com,0,False,user
