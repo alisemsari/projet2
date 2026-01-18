@@ -16,13 +16,25 @@ import os
 # layout="wide" : Force l'affichage à utiliser toute la largeur de l'écran.
 st.set_page_config(page_title="Cinéma Recommandation", layout="wide")
 
-# --- MODIFICATION POUR ENLEVER L'ICÔNE GITHUB ---
+# --- MODIFICATION POUR ENLEVER UNIQUEMENT L'ONGLET GITHUB ---
 st.markdown(
     """
     <style>
-    .stAppDeployButton {display:none;}
-    header {visibility: hidden;}
-    footer {visibility: hidden;}
+    /* Masquer uniquement le bouton GitHub et les options de déploiement */
+    .stAppDeployButton {
+        display: none !important;
+    }
+    /* Masquer le menu "Manage App" et le footer sans supprimer le header complet */
+    footer {
+        visibility: hidden;
+    }
+    #MainMenu {
+        visibility: hidden;
+    }
+    /* Cache spécifiquement les icônes de développement en haut à droite */
+    header[data-testid="stHeader"] > div:first-child {
+        display: none;
+    }
     </style>
     """,
     unsafe_allow_html=True
